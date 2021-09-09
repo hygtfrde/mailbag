@@ -49,7 +49,7 @@ export class Worker {
    *
    * @oaram inID The ID (_id) of the contact to add.
    */
-  public async deleteContact(inID): Promise<void> {
+  public async deleteContact(inID: any): Promise<void> {
 
     console.log("Contacts.Worker.deleteContact()", inID);
 
