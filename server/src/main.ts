@@ -179,6 +179,12 @@ app.delete("/contacts/:id",
   }
 );
 
+// Update a contact
+// updateContact() 
+// PUT 
+// accept new name and email and the _id 
+// use NeDB to update it 
+
 
 // Start app listening.
 app.listen(80, () => {
