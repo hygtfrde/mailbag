@@ -6,3 +6,8 @@
 * Node.js
 * Webpack
 * Docker 
+
+#### Frameworks Used
+* Express.js
+* NeDB 
+
