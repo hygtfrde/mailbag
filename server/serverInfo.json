@@ -3,7 +3,7 @@
     "host" : "mail.serverInfo.com",
     "port" : 999,
     "auth" : {
-      "user" : "user@serverInfoAuth.com":,
+      "user" : "user@serverInfoAuth.com",
       "pass" : "x"
     }
   },

@@ -5,6 +5,7 @@ var path = require("path");
 var fs = require("fs");
 // Read in the server information file.
 var rawInfo = fs.readFileSync(path.join(__dirname, "../serverInfo.json"));
+// convert the string version into JSON version
 exports.serverInfo = JSON.parse(rawInfo);
 console.log("ServerInfo: ", exports.serverInfo);
 //# sourceMappingURL=ServerInfo.js.map
