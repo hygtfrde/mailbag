@@ -1,31 +1,27 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Worker = void 0;
 // Node imports.
 var path = __importStar(require("path"));
 // Library imports.
 var Datastore = require("nedb");
 // The worker that will perform contact operations.
 var Worker = /** @class */ (function () {
+    /*
+    ---------------------------------------
+      Functions on the Worker Class
+      * LIST CONTACTS
+      * ADD CONTACT
+      * DELETE CONTACT
+      * UPDATE
+    ---------------------------------------
+    */
     /**
      * Constructor.
      */
@@ -95,11 +91,18 @@ var Worker = /** @class */ (function () {
                 }
                 else {
                     console.log("Contacts.Worker.deleteContact(): Ok", inNumRemoved);
-                    inResolve();
+                    inResolve('delete OK');
                 }
             });
         });
     }; /* End deleteContact(). */
+    Worker.prototype.updateContact = function (inID) {
+        var _this = this;
+        console.log("Contacts.Worker.updateContact()", inID);
+        return new Promise(function (inResolve, inReject) {
+            _this.db.update({}, {});
+        });
+    };
     return Worker;
 }()); /* End class. */
 exports.Worker = Worker;

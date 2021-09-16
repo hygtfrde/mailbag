@@ -26,9 +26,10 @@ app.use("/", express.static(path.join(__dirname, "../../client/dist")));
 
 
 // Enable CORS so that we can call the API even from anywhere.
+// Client's browser will ping server before requesting headers 
 app.use(function(inRequest: Request, inResponse: Response, inNext: NextFunction) {
   inResponse.header("Access-Control-Allow-Origin", "*");
-  inResponse.header("Access-Control-Allow-Methods", "GET,POST,DELETE,OPTIONS");
+  inResponse.header("Access-Control-Allow-Methods", "GET,POST,DELETE,OPTIONS,PUT");
   inResponse.header("Access-Control-Allow-Headers", "Origin,X-Requested-With,Content-Type,Accept");
   inNext();
 });
@@ -190,6 +191,7 @@ app.delete("/contacts/:id",
 
 
 // Start app listening.
-app.listen(8080, () => {
-  console.log("MailBag server open for requests");
+const PORT = 8080; 
+app.listen(PORT, () => {
+  console.log(`MailBag server open for requests at ${PORT}`);
 });

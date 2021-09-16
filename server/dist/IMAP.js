@@ -36,7 +36,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Worker = void 0;
 var ImapClient = require("emailjs-imap-client");
 var mailparser_1 = require("mailparser");
 // Disable certificate validation (less secure, but needed for some servers).

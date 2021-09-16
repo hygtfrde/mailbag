@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.serverInfo = void 0;
 // Note imports.
 var path = require("path");
 var fs = require("fs");
