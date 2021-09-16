@@ -23,6 +23,17 @@ export class Worker {
   private db: Nedb;
 
 
+  /* 
+  ---------------------------------------
+    Functions on the Worker Class 
+    * LIST CONTACTS
+    * ADD CONTACT
+    * DELETE CONTACT 
+    * UPDATE 
+  --------------------------------------- 
+  */ 
+
+
   /**
    * Constructor.
    */
@@ -111,13 +122,23 @@ export class Worker {
             inReject(inError);
           } else {
             console.log("Contacts.Worker.deleteContact(): Ok", inNumRemoved);
-            inResolve();
+            inResolve('delete OK');
           }
         }
       );
     });
 
   } /* End deleteContact(). */
+
+  public updateContact(inID: string): Promise<string> {
+    console.log("Contacts.Worker.updateContact()", inID);
+
+    return new Promise((inResolve, inReject) => {
+      this.db.update(
+        {},{}
+      );
+    });
+  }
 
 
 } /* End class. */

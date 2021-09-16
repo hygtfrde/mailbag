@@ -10,6 +10,7 @@ import * as IMAP from "./IMAP";
 import * as SMTP from "./SMTP";
 import * as Contacts from "./Contacts";
 import { IContact } from "./Contacts";
+import cors from 'cors'; 
 
 
 // Our Express app.
@@ -31,6 +32,8 @@ app.use(function(inRequest: Request, inResponse: Response, inNext: NextFunction)
   inResponse.header("Access-Control-Allow-Headers", "Origin,X-Requested-With,Content-Type,Accept");
   inNext();
 });
+
+app.use(cors()); 
 
 
 // ---------- RESTful endpoint operations begin. ----------
@@ -187,6 +190,6 @@ app.delete("/contacts/:id",
 
 
 // Start app listening.
-app.listen(80, () => {
+app.listen(8080, () => {
   console.log("MailBag server open for requests");
 });
