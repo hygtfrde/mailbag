@@ -1,18 +1,18 @@
 {
   "smtp" : {
-    "host" : "mail.serverInfo.com",
-    "port" : 999,
+    "host" : "imap.gmail.com",
+    "port" : 993,
     "auth" : {
-      "user" : "user@serverInfoAuth.com",
-      "pass" : "x"
+      "user" : "me@gmail.com",
+      "pass" : "xxx"
     }
   },
   "imap" : {
-    "host" : "mail.serverInfo.com",
-    "port" : 999,
+    "host" : "imap.gmail.com",
+    "port" : 993,
     "auth" : {
-      "user" : "user@serverInfoAuth.com",
-      "pass" : "x"
+      "user" : "me@gmail.com",
+      "pass" : "xxx"
     }
   }
 }

@@ -6,6 +6,7 @@ import { config } from "./config";
 
 // Define interface to describe a contact.  Note that we'll only have an _id field when retrieving or adding, so
 // it has to be optional.
+// same interface structure as on the server-side 
 export interface IContact { _id?: number, name: string, email: string }
 
 
