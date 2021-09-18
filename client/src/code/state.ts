@@ -167,13 +167,13 @@ export function createState(inParentComponent) {
 
       console.log("state.addMailboxToList()", inMailbox);
 
-      // Copy list.
+      // Copy list with slice(0)
       const cl: IMAP.IMailbox[] = this.state.mailboxes.slice(0);
 
       // Add new element.
       cl.push(inMailbox);
 
-      // Update list in state.
+      // Update list in state with the copy created above 
       this.setState({ mailboxes : cl });
 
     }.bind(inParentComponent), /* End addMailboxToList(). */

@@ -19,13 +19,20 @@ const baseComponent = ReactDOM.render(<BaseLayout />, document.body);
 
 // Now go fetch the user's mailboxes, and then their contacts.
 baseComponent.state.showHidePleaseWait(true);
+
+// -------------------
+// getMailBoxes() 
 async function getMailboxes() {
   const imapWorker: IMAP.Worker = new IMAP.Worker();
   const mailboxes: IMAP.IMailbox[] = await imapWorker.listMailboxes();
+  // mailboxes returns an array 
   mailboxes.forEach((inMailbox) => {
+    // push each mailbox into the list 
     baseComponent.state.addMailboxToList(inMailbox);
   });
 }
+// -------------------
+
 getMailboxes().then(function() {
   // Now go fetch the user's contacts.
   async function getContacts() {
