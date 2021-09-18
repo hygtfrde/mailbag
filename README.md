@@ -17,5 +17,5 @@
 
 #### Install and Run 
 In the <code>/server</code> directory run 
-```npm install``` and then 
+```npm install``` and then <br> 
 ```npm run dev``` to compile the TypeScript and launch the server 
