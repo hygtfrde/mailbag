@@ -92,7 +92,7 @@ app.get("/mailboxes", function (inRequest, inResponse) { return __awaiter(void 0
             case 3:
                 inError_1 = _a.sent();
                 console.log("GET /mailboxes (1): Error", inError_1);
-                inResponse.send("error");
+                inResponse.send("GET /mailboxes error");
                 return [3 /*break*/, 4];
             case 4: return [2 /*return*/];
         }
@@ -120,7 +120,7 @@ app.get("/mailboxes/:mailbox", function (inRequest, inResponse) { return __await
             case 3:
                 inError_2 = _a.sent();
                 console.log("GET /mailboxes (2): Error", inError_2);
-                inResponse.send("error");
+                inResponse.send("GET /mailboxes/:mailbox error");
                 return [3 /*break*/, 4];
             case 4: return [2 /*return*/];
         }
@@ -149,7 +149,7 @@ app.get("/messages/:mailbox/:id", function (inRequest, inResponse) { return __aw
             case 3:
                 inError_3 = _a.sent();
                 console.log("GET /messages (3): Error", inError_3);
-                inResponse.send("error");
+                inResponse.send("GET /messages/:mailbox/:id error");
                 return [3 /*break*/, 4];
             case 4: return [2 /*return*/];
         }
@@ -178,7 +178,7 @@ app.delete("/messages/:mailbox/:id", function (inRequest, inResponse) { return _
             case 3:
                 inError_4 = _a.sent();
                 console.log("DELETE /messages: Error", inError_4);
-                inResponse.send("error");
+                inResponse.send("DELETE /messages/:mailbox/:id error");
                 return [3 /*break*/, 4];
             case 4: return [2 /*return*/];
         }
@@ -204,7 +204,7 @@ app.post("/messages", function (inRequest, inResponse) { return __awaiter(void 0
             case 3:
                 inError_5 = _a.sent();
                 console.log("POST /messages: Error", inError_5);
-                inResponse.send("error");
+                inResponse.send("POST /messages error");
                 return [3 /*break*/, 4];
             case 4: return [2 /*return*/];
         }
@@ -230,7 +230,7 @@ app.get("/contacts", function (inRequest, inResponse) { return __awaiter(void 0,
             case 3:
                 inError_6 = _a.sent();
                 console.log("GET /contacts: Error", inError_6);
-                inResponse.send("error");
+                inResponse.send("GET /contacts error");
                 return [3 /*break*/, 4];
             case 4: return [2 /*return*/];
         }
@@ -256,7 +256,7 @@ app.post("/contacts", function (inRequest, inResponse) { return __awaiter(void 0
             case 3:
                 inError_7 = _a.sent();
                 console.log("POST /contacts: Error", inError_7);
-                inResponse.send("error");
+                inResponse.send("POST /contacts error");
                 return [3 /*break*/, 4];
             case 4: return [2 /*return*/];
         }
@@ -282,7 +282,7 @@ app.delete("/contacts/:id", function (inRequest, inResponse) { return __awaiter(
             case 3:
                 inError_8 = _a.sent();
                 console.log(inError_8);
-                inResponse.send("error");
+                inResponse.send("DELETE /contacts/:id error");
                 return [3 /*break*/, 4];
             case 4: return [2 /*return*/];
         }

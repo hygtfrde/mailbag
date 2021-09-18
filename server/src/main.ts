@@ -51,7 +51,7 @@ app.get("/mailboxes",
       inResponse.json(mailboxes);
     } catch (inError) {
       console.log("GET /mailboxes (1): Error", inError);
-      inResponse.send("error");
+      inResponse.send("GET /mailboxes error");
     }
   }
 );
@@ -70,7 +70,7 @@ app.get("/mailboxes/:mailbox",
       inResponse.json(messages);
     } catch (inError) {
       console.log("GET /mailboxes (2): Error", inError);
-      inResponse.send("error");
+      inResponse.send("GET /mailboxes/:mailbox error");
     }
   }
 );
@@ -90,7 +90,7 @@ app.get("/messages/:mailbox/:id",
       inResponse.send(messageBody);
     } catch (inError) {
       console.log("GET /messages (3): Error", inError);
-      inResponse.send("error");
+      inResponse.send("GET /messages/:mailbox/:id error");
     }
   }
 );
@@ -110,7 +110,7 @@ app.delete("/messages/:mailbox/:id",
       inResponse.send("ok");
     } catch (inError) {
       console.log("DELETE /messages: Error", inError);
-      inResponse.send("error");
+      inResponse.send("DELETE /messages/:mailbox/:id error");
     }
   }
 );
@@ -127,7 +127,7 @@ app.post("/messages",
       inResponse.send("ok");
     } catch (inError) {
       console.log("POST /messages: Error", inError);
-      inResponse.send("error");
+      inResponse.send("POST /messages error");
     }
   }
 );
@@ -144,7 +144,7 @@ app.get("/contacts",
       inResponse.json(contacts);
     } catch (inError) {
       console.log("GET /contacts: Error", inError);
-      inResponse.send("error");
+      inResponse.send("GET /contacts error");
     }
   }
 );
@@ -161,7 +161,7 @@ app.post("/contacts",
       inResponse.json(contact);
     } catch (inError) {
       console.log("POST /contacts: Error", inError);
-      inResponse.send("error");
+      inResponse.send("POST /contacts error");
     }
   }
 );
@@ -178,7 +178,7 @@ app.delete("/contacts/:id",
       inResponse.send("ok");
     } catch (inError) {
       console.log(inError);
-      inResponse.send("error");
+      inResponse.send("DELETE /contacts/:id error");
     }
   }
 );
