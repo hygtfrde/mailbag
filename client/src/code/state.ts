@@ -7,6 +7,7 @@ import * as SMTP from "./SMTP";
 
 /**
  * This function must be called once and only once from BaseLayout.
+ * Use bind() method and pass in parent component, therefore state is bound to parent component <BaseLayout/>
  */
 export function createState(inParentComponent) {
 

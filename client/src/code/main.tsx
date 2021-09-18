@@ -1,5 +1,6 @@
-// Style imports.
+// normalize.css takes care of CSS resets for specific browsers, and must be imported before other sheets 
 import "normalize.css";
+// Style imports.
 import "../css/main.css";
 
 // React imports.

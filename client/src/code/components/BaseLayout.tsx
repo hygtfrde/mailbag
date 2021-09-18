@@ -15,6 +15,8 @@ import ContactList from "./ContactList";
 import WelcomeView from "./WelcomeView";
 import ContactView from "./ContactView";
 import MessageView from "./MessageView";
+
+// state is created with a function that returns an object 
 import { createState } from "../state";
 
 
