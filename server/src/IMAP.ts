@@ -64,7 +64,11 @@ export class Worker {
     const client: any = new ImapClient.default(
       Worker.serverInfo.imap.host,
       Worker.serverInfo.imap.port,
-      { auth : Worker.serverInfo.imap.auth }
+      { 
+        auth : Worker.serverInfo.imap.auth,
+        tls : true,
+        tlsOptions: { rejectUnauthorized: false }
+      },
     );
     client.logLevel = client.LOG_LEVEL_NONE;
     client.onerror = (inError: Error) => {

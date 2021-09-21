@@ -31,7 +31,9 @@ class BaseLayout extends Component {
    * ever have to pass this entire object down through props (not necessarily the best design in terms of data
    * encapsulation, but it does have the benefit of being quite a bit simpler).
    */
+  
   state = createState(this);
+  // passing 'this' into createState binds all methods to this component 
 
 
   /**

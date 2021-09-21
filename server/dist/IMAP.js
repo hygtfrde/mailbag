@@ -60,7 +60,11 @@ var Worker = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        client = new ImapClient.default(Worker.serverInfo.imap.host, Worker.serverInfo.imap.port, { auth: Worker.serverInfo.imap.auth });
+                        client = new ImapClient.default(Worker.serverInfo.imap.host, Worker.serverInfo.imap.port, {
+                            auth: Worker.serverInfo.imap.auth,
+                            tls: true,
+                            tlsOptions: { rejectUnauthorized: false }
+                        });
                         client.logLevel = client.LOG_LEVEL_NONE;
                         client.onerror = function (inError) {
                             console.log("IMAP.Worker.listMailboxes(): Connection error", inError);
