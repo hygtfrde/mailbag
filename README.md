@@ -1,5 +1,5 @@
 # MailBag
-MailBag is a single sign on application that links an email address using IMAP and SMTP to a client's front-end interface, based off Frank Zammetti's starter code. After installing and configuring your email with IMAP, you will be able to control your email through a custom-built client interface in your browser. 
+MailBag is a single sign on application that links an email address using IMAP and SMTP to a client's front-end interface, based off Frank Zammetti's starter code. After installing the software and configuring your address with IMAP, you will be able to control your email through a custom-built client interface in your browser. 
 
 #### Languages and Technology Used
 * TypeScript
@@ -58,6 +58,7 @@ and then <br>
 to compile the TypeScript and launch the server 
 
 #### File Rundown 
+```
 ├── client
 │   ├── dist
 │   │   ├── index.html
@@ -146,3 +147,4 @@ to compile the TypeScript and launch the server
     │   ├── ServerInfo.ts
     │   └── SMTP.ts
     └── tsconfig.json
+```
