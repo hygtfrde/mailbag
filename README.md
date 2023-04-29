@@ -47,15 +47,15 @@ MailBag is a single sign on application that links an email address using IMAP a
 }
 ```
 * Make sure to enable IMAP with your email provider 
-* You may run into TLS/SSL errors as well as less secure application authentication failures. The solutions vary depending on your email provider and their security settings. 
+* You may run into TLS/SSL errors as well as application authentication failures. The configs vary depending on your email provider and their security settings. 
 
 #### Install and Run 
-Make sure the paths are correct so the server folder can find the client directory. <br> 
+Make sure the paths are correct so the server directory can find the client directory. <br> 
 In the <code>/server</code> directory run <br>
 ```npm install``` 
 and then <br> 
 ```npm run dev``` <br> 
-to compile the TypeScript and launch the server 
+to compile the TypeScript source code and launch the client-server pack.
 
 #### File Rundown 
 ```
